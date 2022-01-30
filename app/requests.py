@@ -43,7 +43,7 @@ def process_results(news_list):
         news_list: A list of dictionaries that contain news details
 
     Returns :
-        news_results: A list of movie objects
+        news_results: A list of news "objects
     """
     news_results = []
     for news_item in news_list:
