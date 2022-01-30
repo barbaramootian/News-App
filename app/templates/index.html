@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+<div class = "container-fluid">
+ <h1>{% block title %} Welcome to the global news{% endblock %}</h1>
+<img src="{{ url_for('static', filename= 'news.jpg') }}" height = 700, width = 1500>
+</div>
+{% endblock %}
