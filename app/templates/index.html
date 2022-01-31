@@ -1,8 +1,12 @@
-{% extends 'base.html' %}
-
+ {% extends "base.html"%}
 {% block content %}
-<div class = "container-fluid">
- <h1>{% block title %} Welcome to the global news{% endblock %}</h1>
-<img src="{{ url_for('static', filename= 'news.jpg') }}" height = 700, width = 1500>
-</div>
-{% endblock %}
+    <div class="container-fluid">
+        <h1 class="text-center">{{title}}</h1>
+        {% for source in  all_sources %}
+        <button>
+          <a href="{{source.url}}"> {{source.name}}</a>
+      </button>
+        {% endfor%}
+    </div>
+  {% endblock%}
+

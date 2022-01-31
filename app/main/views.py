@@ -9,9 +9,8 @@ def index():
     View root page function that returns the index page and its data
     """
     all_sources = get_sources_news()
-    title = 'Home - Welcome to Global News'
-    message = 'Hello World!'
-    return render_template('index.html',title=title, message=message,all_sources=all_sources)
+    title = 'Welcome to Global News'
+    return render_template('index.html',title=title,all_sources=all_sources)
 
 
 @main.route('/news/<name>')
