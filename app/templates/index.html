@@ -2,11 +2,19 @@
 {% block content %}
     <div class="container-fluid">
         <h1 class="text-center">{{title}}</h1>
+        {% for source in  bbc_news %}
+        <img src="{{source.urlToImage}}">
+        <h1>{{source.title}}</h1>
+        <h2>{{source.description}}</h2>
+        <h3>{{source.publishedAt}}</h3>
+        {% endfor%}
         {% for source in  all_sources %}
         <button>
           <a href="{{source.url}}"> {{source.name}}</a>
       </button>
         {% endfor%}
+
+
     </div>
   {% endblock%}
 
