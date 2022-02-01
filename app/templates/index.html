@@ -8,7 +8,7 @@
                 {% endfor%}<hr>
         {% for source in  bbc_news %}
         <div class="row">
-            <div class="col-md-3"> <img src="{{source.urlToImage}}"></div>
+            <div class="col-md-3" id="img"> <img src="{{source.urlToImage}}"></div>
             <div class="col-md-8">
                 <h1>{{source.title}}</h1>
                 <h2>{{source.description}}</h2>
