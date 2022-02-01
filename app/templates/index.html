@@ -1,20 +1,21 @@
  {% extends "base.html"%}
 {% block content %}
     <div class="container-fluid">
-        <h1 class="text-center">{{title}}</h1>
+       {% for source in  all_sources %}
+                <button>
+                  <a href="{{source.url}}"> {{source.name}}</a>
+               </button>
+                {% endfor%}<hr>
         {% for source in  bbc_news %}
-        <img src="{{source.urlToImage}}">
-        <h1>{{source.title}}</h1>
-        <h2>{{source.description}}</h2>
-        <h3>{{source.publishedAt}}</h3>
+        <div class="row">
+            <div class="col-md-3"> <img src="{{source.urlToImage}}"></div>
+            <div class="col-md-8">
+                <h1>{{source.title}}</h1>
+                <h2>{{source.description}}</h2>
+                 <h3>{{source.publishedAt}}</h3><hr>
+            </div>
+        </div>
         {% endfor%}
-        {% for source in  all_sources %}
-        <button>
-          <a href="{{source.url}}"> {{source.name}}</a>
-      </button>
-        {% endfor%}
-
-
     </div>
   {% endblock%}
 
